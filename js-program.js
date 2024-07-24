@@ -8,7 +8,7 @@ document.addEventListener("visibilitychange", () => {
 
 // ========== how to add time in web pages ===============
 let time = document.getElementById("time");
-console.log(time);
+// console.log(time);
 
 function getTime() {
   setInterval(() => {
@@ -88,6 +88,28 @@ function reverseArray(arr) {
 
 // console.log(reverseArray([1, 3, 5, 6]));
 
+// =================== length of array without any inbult function ==========
 
+let arr = [1, 2, 3, 4, 5];
 
+function getLength(arr) {
+  let count = 0;
+  for (let i of arr) {
+    count++;
+  }
+  return `Given arry count is : ${count}`;
+}
 
+// console.log(getLength(arr));
+
+// ================= remove one by one element in given array ===============
+
+function removeOne(arr) {
+  while (arr.length > 0) {
+    let removedElement = arr.shift();
+    console.log(`removed element is : ${removedElement}`);
+    console.log(`remaining elements in array is : ${arr}`);
+  }
+}
+
+removeOne(arr);
